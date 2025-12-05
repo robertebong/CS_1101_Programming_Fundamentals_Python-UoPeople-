@@ -1,0 +1,128 @@
+#----------------------------------- PART ONE(Hypotenuse Calculator Function)-----------------------------
+
+# To run  stage 1,2, or 3  of the Function, Unstring the Docstring around the codeblocks
+
+"""
+# --------------------------- stage 1 -----------------------------------
+
+def hypotenuse(a, b):
+    # Stage 1: Define signature and placeholder return.
+    return 0.0
+
+#  Use of intermediary variable and print function to display 
+#  function output on the python interpreter.
+
+x =  hypotenuse(3,4)   # intermediary variable
+print (x) 
+
+"""
+
+"""
+# --------------------------- stage 2 -----------------------------------
+
+import math
+
+def hypotenuse(a, b):
+    # Stage 2: Calculate squares and use scaffolding to check values.
+    a_squared = a ** 2
+    b_squared = b ** 2
+    print(f"Scaffolding: a^2 is {a_squared}") # Scaffolding
+    print(f"Scaffolding: b^2 is {b_squared}") # Scaffolding
+    return 0.0 # Still returning placeholder
+
+"""
+
+"""
+# --------------------------- stage 3 -----------------------------------
+
+import math
+
+def hypotenuse(a, b):
+    # Stage 3: Calculate sum and final result, checking intermediate sum.
+    a_squared = a ** 2
+    b_squared = b ** 2
+    sum_of_squares = a_squared + b_squared
+    
+    print(f"Scaffolding: Sum of squares is {sum_of_squares}") # Scaffolding
+    
+    result = math.sqrt(sum_of_squares)
+    return result # Now returning the calculated result 
+    
+"""
+
+
+# --------------------------- stage 4 -----------------------------------
+
+print(60 * " ")
+
+import math
+
+def hypotenuse(a, b):
+    # Final Function: Computes hypotenuse using the Pythagorean theorem.
+    # Scaffolding has been removed for a clean, production-ready function.
+    return math.sqrt(a**2 + b**2)
+
+
+# Required Test Calls:
+print(f"hypotenuse(3, 4): {hypotenuse(3, 4)}")
+print(f"hypotenuse(5, 12): {hypotenuse(5, 12)}")
+print(f"hypotenuse(1, 1): {hypotenuse(1, 1)}")
+
+print(60 * " ")
+print(5*"-","End of Hypotenuse Function Execution",5*"-")
+print(60 * " ")
+
+#----------------------------------- PART TWO (Bill Calculator Function)-----------------------------
+
+# To run  stage 1 or 2   of the Function, Unstring the Docstring around the codeblocks
+
+"""
+# --------------------------- stage 1 -----------------------------------
+
+def calculate_split_cost(bill, tip_percent, people):
+    # Stage 1: Define signature and placeholder return.
+    return 0.0
+
+#  Use of intermediary variable and print function to display 
+#  function output on the python interpreter.
+
+x =  calculate_split_cost(100.00,15,2)   # intermediary variable
+print (x) 
+
+"""
+
+"""
+# --------------------------- stage 2 -----------------------------------
+
+def calculate_split_cost(bill, tip_percent, people):
+    # Stage 2: Calculate the total bill including tip and check using scaffolding.
+    tip_multiplier = 1 + (tip_percent / 100) # Convert 15% to 1.15
+    total_bill = bill * tip_multiplier
+    
+    print(f"Scaffolding: Total bill w/ tip: ${total_bill:.2f}") # Scaffolding
+    
+    return 0.0 # Still returning placeholder
+
+"""
+
+
+# --------------------------- stage 2 -----------------------------------
+
+def calculate_split_cost(bill, tip_percent, people):
+    # Final Function: Calculates the cost per person including tip.
+    # The return value is rounded to two decimal places for currency format.
+    
+    tip_multiplier = 1 + (tip_percent / 100) # Convert percentage (e.g., 15) to multiplier (1.15)
+    total_bill = bill * tip_multiplier
+    cost_per_person = total_bill / people
+    
+    return round(cost_per_person, 2) # Round to standard currency precision (2 decimal places)
+
+# Required Test Calls:
+print(f"Bill $100.00, 15% tip, 2 people: ${calculate_split_cost(100.00, 15, 2)}")
+print(f"Bill $55.50, 20% tip, 3 people: ${calculate_split_cost(55.50, 20, 3)}")
+print(f"Bill $24.99, 10% tip, 1 person: ${calculate_split_cost(24.99, 10, 1)}")
+
+print(60 * " ")
+print(5*"-","End of Bill Function Execution",5*"-")
+print(60 * " ")
